@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koundinya Achyuthuni</title>
+    <style>
+        body{
+            background-color:#84b1d7e4 ;
+        }
+ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #84b1d7e4;
+            color: #fff;
+            padding: 10px;
+
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .hero {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 100px 0;
+            border-radius: 25px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+
+        .about img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .projects {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+            border-radius: 25px;
+        }
+
+        .project-card {
+            background-color: #eaeaea;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+        <div class="hero" id="home">
+            <h1>Koundinya Achyuthuni</h1>
+            I'm a CS (AI & ML) graduate. Currently seeking software development opportunities.
+        </div><br>
+
+    <div class="projects" id="projects">
+            <h2>Projects!</h2>
+            <div onclick="window.location.href = 'https://miststudentdashboard.pythonanywhere.com';" style="cursor: pointer;" class="project-card">
+                <h3>Student Dashbord</h3>
+                <p>
+                    The goal was to create an <em>in-house application</em> for communication between 
+                    lecturers and students. Functionality of the application is simple, the users are 
+                    categorized into 2 groups, teacher & student. Since this is for college, the users are 
+                    created by the admin and the credentials are shared with the users. The users have an 
+                    option to change only their password upon logging into their account. Initially the 
+                    lecturer creates a classroom and shares the classroom code which is generated randomly. 
+                    The students now can join the classroom using that code. The functionality of module is 
+                    role based, lecturers have read and write permissions whereas students only have read 
+                    permissions. The lecturer in a classroom can upload notes, publish a couple of bullet 
+                    points with regards to the classroom & lecture, create assignments, update students 
+                    with notifications. On the students can only view these and download the notes & 
+                    notifications. Other modules include lost & found where users can ping an item found on 
+                    campus for the people to find them. Another module include <em>in-house social media</em>
+                    exclusive for the college where users can post and share their media and thoughts, 
+                    interact with other users via likes and comments.
+                </p>
+                <p>
+                    <u>Tech Stack:</u> Django for backend; HTML5, CSS, JS for the front-end.
+                </p>
+            </div>
+
+            <div onclick="window.location.href = 'https://khronicler.pythonanywhere.com';" style="cursor: pointer;" class="project-card">
+            <h3>Blogging Website</h3>
+            <p>
+                There is a scene on "The Social Network" film where zuckerberg blogs while coding which 
+                fascinated me to do the same, blog while code. With that spark of interest, developed a 
+                blogging site where users can blog about and interact with others online via 
+                comments. 
+            </p>
+        </div>
+    </div>
+</div>
+
+    <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p><a href="mailto:achyuthunikoundinya@gmail.com">e-mail</a> | <a href="https://www.linkedin.com/in/koundinya-achyuthuni/">linkedin</a> | <a href="https://github.com/koundinya2002">github</a></p>
+    </div>
+
+    <footer>
+        <p>© 2024 Koundinya Achyuthuni</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
