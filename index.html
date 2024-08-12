@@ -1,158 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koundinya Achyuthuni</title>
-    <style>
-        body{
-            background-color:#84b1d7e4 ;
-        }
- 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        nav {
-            background-color: #84b1d7e4;
-            color: #fff;
-            padding: 10px;
-
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav li {
-            margin-right: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .hero {
-            background-color: #f9f9f9;
-            text-align: center;
-            padding: 100px 0;
-            border-radius: 25px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-
-        .about img {
-            max-width: 100%;
-            border-radius: 50%;
-        }
-
-        .projects {
-            padding: 50px 0;
-            background-color: #f9f9f9;
-            text-align: center;
-            border-radius: 25px;
-        }
-
-        .project-card {
-            background-color: #eaeaea;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact {
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-        <div class="hero" id="home">
-            <h1>Koundinya Achyuthuni</h1>
-            I'm a CS (AI & ML) graduate. Currently seeking software development opportunities.
-        </div><br>
-
-    <div class="projects" id="projects">
-            <h2>Projects!</h2>
-            <div onclick="window.location.href = 'https://miststudentdashboard.pythonanywhere.com';" style="cursor: pointer;" class="project-card">
-                <h3>Student Dashbord</h3>
-                <p>
-                    The goal was to create an <em>in-house application</em> for communication between 
-                    lecturers and students. Functionality of the application is simple, the users are 
-                    categorized into 2 groups, teacher & student. Since this is for college, the users are 
-                    created by the admin and the credentials are shared with the users. The users have an 
-                    option to change only their password upon logging into their account. Initially the 
-                    lecturer creates a classroom and shares the classroom code which is generated randomly. 
-                    The students now can join the classroom using that code. The functionality of module is 
-                    role based, lecturers have read and write permissions whereas students only have read 
-                    permissions. The lecturer in a classroom can upload notes, publish a couple of bullet 
-                    points with regards to the classroom & lecture, create assignments, update students 
-                    with notifications. On the students can only view these and download the notes & 
-                    notifications. Other modules include lost & found where users can ping an item found on 
-                    campus for the people to find them. Another module include <em>in-house social media</em>
-                    exclusive for the college where users can post and share their media and thoughts, 
-                    interact with other users via likes and comments.
-                </p>
-                <p>
-                    <u>Tech Stack:</u> Django for backend; HTML5, CSS, JS for the front-end.
-                </p>
-            </div>
-
-            <div onclick="window.location.href = 'https://khronicler.pythonanywhere.com';" style="cursor: pointer;" class="project-card">
-            <h3>Blogging Website</h3>
-            <p>
-                There is a scene on "The Social Network" film where zuckerberg blogs while coding which 
-                fascinated me to do the same, blog while code. With that spark of interest, developed a 
-                blogging site where users can blog about and interact with others online via 
-                comments. 
-            </p>
+    <nav id="desktop-nav">
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </div>
-</div>
-
-    <div class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <p><a href="mailto:achyuthunikoundinya@gmail.com">e-mail</a> | <a href="https://www.linkedin.com/in/koundinya-achyuthuni/">linkedin</a> | <a href="https://github.com/koundinya2002">github</a></p>
-    </div>
-
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <hr>
+                <li><a href="#about" onclick="toggleMenu()">About Me</a></li><hr>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li><hr>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li><hr>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li><hr>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div id="section__text">
+            <p class="section__text__p1">Hi, I'm</p>
+            <h1>Koundinya Achyuthuni</h1>
+            <p class="section__text__p2">Software Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('assets/Koundinya Achyuthuni.pdf')">Download Resume</button>
+                <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+            </div>
+            <br>
+            <div class="socials-container">
+                <img src="assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https:www.linkedin.com/in/koundinya-achyuthuni'">
+                <img src="assets/github.png" alt="My GitHub Profile" class="icon" onclick="location.href='https:/github.com/koundinya2002'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get to know more</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="assets/education.png" alt="education icon" class="icon">
+                        <h3>Education</h3>
+                        <p>B. Tech Computer Science Engineering - Artificial Engineering & Machine Learning</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="assets/paperclip.svg" alt="education icon" class="icon">
+                        <h3>Publication</h3>
+                        <p>
+                            <a href="https://ijcrt.org/viewfull.php?&p_id=IJCRT2309091" target="_blank">A Review on Python Libraries to Develop Applicaitons in all Domains</a>
+                        </p>
+                    </div>
+                    <div class="details-container">
+                        <img src="assets/experience.png" alt="education icon" class="icon">
+                        <h3>Achievements</h3>
+                        <p>
+                            <li>TechnoMIST 2k23 Winner</li>
+                            <li>Project Expo 2k24 Winner</li>
+                        </p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. A reiciendis voluptatum odio debitis, nobis quibusdam voluptate aut ea sapiente? Aut necessitatibus nostrum dolorum nihil rem recusandae atque consectetur eveniet vitae velit quas modi similique quidem error, aperiam unde quia harum repudiandae perferendis, minima laudantium! Doloribus soluta saepe unde facilis incidunt.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="assets/arrow.png" alt="scroll-down icon" class="icon arrow" onclick="location.href='./#skills'">
+    </section>
+    <section id="skills">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend</h2>
+                    <div class="article-conatiner">
+                        <article>
+                            <div>
+                                <h3><li>HTML</li></h3>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3><li>CSS</li></h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Programming Languages</h2>
+                    <div class="article-conatiner">
+                        <article>
+                            <div>
+                                <h3><li>Python</li></h3>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3><li>Java</li></h3>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3><li>JavaScript</li></h3>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3><li>C</li></h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Others</h2>
+                    <div class="article-conatiner">
+                        <article>
+                            <div>
+                                <h3><li>Django</li></h3>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3><li>MySql</li></h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/arrow.png" alt="scroll-down icon" class="icon arrow" onclick="location.href='./#projects'">
+    </section>
+    <section id="projects">
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <h2 class="experience-sub-title project-title">Weather Forecasting ML</h2>
+                    <p>
+                        Developed a weather forecasting application using ridge regression. Read the dataset
+                        into the model using pandas, cleaned the dataset to find any null values and filled those
+                        using forward and backward fills for model to train on accurate data. Plotted graphs for
+                        maximum and minimum temperature along with the predicted values using matplotlib
+                        for graphical understanding.
+                    </p>
+                    <br>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https:github.com/koundinya2002/weather_forecast'">GitHub</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <h2 class="experience-sub-title project-title">Khronicler</h2>
+                    <p>
+                        Khronicler is a blogging application where people can write their blogs and share them with users online
+                        and interact with them using likes, comments. The integrity of the site is maintained by using login authenticaion
+                        and decorators to ensure only the authenticated people are using the site. 
+                    </p>
+                    <br>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https:github.com/koundinya2002/Django-Blogging-Site'">GitHub</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https:khronicler.pythonanywhere.com'">Live Site</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <h2 class="experience-sub-title project-title">MIST Student Dashboard</h2>
+                    <p>
+                        A simple student dashboard for teachers & students to communicate where each user is
+                        admin created and login authenticated. Teachers can create classrooms and create
+                        assignments, upload notes, notify students regarding any updates. Students can join these
+                        classrooms and access them.<br>Use below account for accessing the site as faculty view:<br>
+                        username: demo_faculty <br> password: C3zMzVivykGwgu9
+                        
+                    </p>
+                    <br>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https:github.com/koundinya2002/mist-student-dashboard'">GitHub</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https:miststudentdashboard.pythonanywhere.com'">Live Site</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/arrow.png" alt="scroll-down icon" class="icon arrow" onclick="location.href='./#contact'">
+    </section>
+    <br><br><br><br><br>
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="assets/email.png" alt="email icon" class="icon contact-icon email-icon">
+                <p><a href="mailto:achyuthunikoundinya@gmail.com">achyuthunikoundinya@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="assets/linkedin.png" alt="linkedin icon" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/koundinya-achyuthuni">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
     <footer>
-        <p>© 2024 Koundinya Achyuthuni</p>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Koundinya Achyuthuni. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
