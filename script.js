@@ -10,5 +10,5 @@ function openLinkedin() {
 }
 
 function openGitHub() {
-    window.open('https:/github.com/koundinya2002')
+    window.open('https:/github.com/koundinya2002');
 }
