@@ -295,6 +295,7 @@ section {
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
+    text-decoration: underline;
 }
 
 .experience-details-container {
@@ -352,6 +353,14 @@ article .icon {
     border-color: rgb(163, 163, 163);
 }
 
+.about-containers-projects {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
 
 /* CONTACT SECTION */
 #contact {

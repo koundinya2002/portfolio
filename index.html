@@ -38,7 +38,7 @@
         <div id="section__text">
             <p class="section__text__p1">Hi, I'm</p>
             <h1>Koundinya Achyuthuni</h1>
-            <p class="section__text__p2">Software Developer</p>
+            <p class="section__text__p2">Python & Django Developer</p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('assets/Koundinya Achyuthuni.pdf')">Download Resume</button>
                 <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
@@ -72,8 +72,8 @@
                         <img src="assets/experience.png" alt="education icon" class="icon">
                         <h3>Achievements</h3>
                         <p>
-                            <li>TechnoMIST 2k23 Winner</li>
-                            <li>Project Expo 2k24 Winner</li>
+                            - TechnoMIST 2k23 Winner<br>
+                            - Project Expo 2k24 Winner
                         </p>
                     </div>
                 </div>
@@ -84,19 +84,24 @@
     <section id="skills">
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Skills</h1>
-        <div class="experience-details-container">
+        <div class="experience-details-container">  
             <div class="about-containers">
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Frontend</h2>
+                    <h2 class="experience-sub-title">Framework & Databases</h2>
                     <div class="article-conatiner">
                         <article>
                             <div>
-                                <h3><li>HTML</li></h3>
+                                <h3><li>Django</li></h3>
                             </div>
                         </article>
                         <article>
                             <div>
-                                <h3><li>CSS</li></h3>
+                                <h3><li>REST API</li></h3>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3><li>SQL</li></h3>
                             </div>
                         </article>
                     </div>
@@ -127,16 +132,41 @@
                     </div>
                 </div>
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Others</h2>
+                    <h2 class="experience-sub-title">Machine Learning Libraries</h2>
                     <div class="article-conatiner">
                         <article>
                             <div>
-                                <h3><li>Django</li></h3>
+                                <h3><li>Scikit-learn</li></h3>
                             </div>
                         </article>
                         <article>
                             <div>
-                                <h3><li>MySql</li></h3>
+                                <h3><li>TensorFlow</li></h3>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3><li>Keras</li></h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend</h2>
+                    <div class="article-conatiner">
+                        <article>
+                            <div>
+                                <h3><li>HTML</li></h3>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3><li>CSS</li></h3>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <h3><li>Tkinter</li></h3>
                             </div>
                         </article>
                     </div>
@@ -147,16 +177,12 @@
     </section>
     <section id="projects">
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
+        <div class="experience-details-container-projects">
+            <div class="about-containers-projects">
                 <div class="details-container color-container">
-                    <h2 class="experience-sub-title project-title">Weather Forecasting ML</h2>
+                    <h2 class="experience-sub-title project-title">Weather Analysis & Forecasting using Python</h2>
                     <p class="project-desc">
-                        Developed a weather forecasting application using ridge regression. Read the dataset
-                        into the model using pandas, cleaned the dataset to find any null values and filled those
-                        using forward and backward fills for model to train on accurate data. Plotted graphs for
-                        maximum and minimum temperature along with the predicted values using matplotlib
-                        for graphical understanding.
+                        Developed a weather data analysis and forecasting tool using Python. The project involves importing and cleaning a weather dataset, handling missing values, and visualizing temperature and precipitation trends. Utilized the Ridge regression model to predict future maximum temperatures based on historical data. The project demonstrates proficiency in data manipulation with Pandas, data visualization with Matplotlib, and machine learning with Scikit-learn.
                     </p>
                     <br>
                     <div class="btn-container">
@@ -166,9 +192,7 @@
                 <div class="details-container color-container">
                     <h2 class="experience-sub-title project-title">Khronicler</h2>
                     <p class="project-desc">
-                        Khronicler is a blogging application where people can write their blogs and share them with users online
-                        and interact with them using likes, comments. The integrity of the site is maintained by using login authenticaion
-                        and decorators to ensure only the authenticated people are using the site. 
+                        Khronicler is a dynamic blogging website utilizing the Django REST Framework. Each view is rendered through API calls, ensuring a seamless and efficient user experience. The website features user authentication, CRUD operations for blog posts, and a responsive design. It also includes functionalities such as commenting, liking posts, and categorizing blogs. This project showcases my proficiency in Django, RESTful APIs, and front-end integration.
                     </p>
                     <br>
                     <div class="btn-container">
@@ -177,12 +201,9 @@
                     </div>
                 </div>
                 <div class="details-container color-container">
-                    <h2 class="experience-sub-title project-title">MIST Student Dashboard</h2>
+                    <h2 class="experience-sub-title project-title">Teacher-Student Communication Dashboard</h2>
                     <p class="project-desc">
-                        A simple student dashboard for teachers & students to communicate where each user is
-                        admin created and login authenticated. Teachers can create classrooms and create
-                        assignments, upload notes, notify students regarding any updates. Students can join these
-                        classrooms and access them.<br>Use below account for accessing the site as faculty view:<br>
+                        Developed a comprehensive communication dashboard for teachers and students using Django for the backend and HTML & CSS for the frontend. The application features admin-created and login-authenticated user accounts, with two user categories: Teachers and Students. Teachers have read and write permissions, allowing them to create classrooms, assignments, upload notes, and notify students of updates. Students have read-only permissions, enabling them to join classrooms and access the provided resources. This project highlights my skills in backend development, user authentication, role-based access control, and front-end web development.<br>Use below account for accessing the site as faculty view:<br>
                         username: demo_faculty <br> password: C3zMzVivykGwgu9
                         
                     </p>
@@ -192,11 +213,48 @@
                         <button class="btn btn-color-2 project-btn" onclick="location.href='https://miststudentdashboard.pythonanywhere.com'">Live Site</button>
                     </div>
                 </div>
+                <div class="details-container color-container">
+                    <h2 class="experience-sub-title project-title">Movie Recommendation System</h2>
+                    <p class="project-desc">
+                        <b><u>Description:</u></b>Developed an interactive movie recommendation system using Python, Pandas, and Scikit-learn. The project involves cleaning and vectorizing movie titles, calculating cosine similarity for recommendations, and integrating user ratings data to improve accuracy. The user interface, built with ipywidgets, allows for real-time search and recommendations. This project showcases my proficiency in data preprocessing, machine learning, and creating interactive applications.<br>
+                        <b><u>Key Features:</u></b><br>
+                            - Text cleaning and vectorization using TfidfVectorizer.<br>
+                            - Cosine similarity for movie recommendations.<br>
+                            - Integration of user ratings data for enhanced recommendations.<br>
+                            - Real-time search and recommendations with ipywidgets.<br>
+                        </ul>
+                    </p>
+                    <br>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/koundinya2002/movie-recommendation-system'">GitHub</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <h2 class="experience-sub-title project-title">JS Arcade Pong Game</h2>
+                    <p class="project-desc">
+                        <b><u>Description</u></b>: Developed a classic Pong game using HTML, CSS, and JavaScript. This project showcases my ability to create interactive web applications with a focus on user experience and responsive design.<br>
+                        
+                        <b><u>Features:</u></b><br>
+                        - Interactive Gameplay: Implemented smooth paddle and ball movements, collision detection, and scoring system.<br>
+                        - Responsive Design: Ensured the game is playable on various devices, including desktops, tablets, and smartphones.<br>
+                        - Audio Integration: Added sound effects for paddle hits, wall bounces, and scoring to enhance the gaming experience.<br>
+                        - Clean Code: Followed best practices for HTML, CSS, and JavaScript to ensure maintainability and readability.<br>
+                        
+                        <b><u>Technologies Used:</u></b><br>
+                        - HTML5<br>
+                        - CSS3<br>
+                        - JavaScript (ES6)<br>
+                    </p>
+                    <br>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/koundinya2002/arcade-pong-js'">GitHub</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://koundinya2002.github.io/arcade-pong-js/'">Live Site</button>
+                    </div>
+                </div>
             </div>
         </div>
         <img src="assets/arrow.png" alt="scroll-down icon" class="icon arrow" onclick="location.href='./#contact'">
     </section>
-    <br><br><br><br><br>
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
