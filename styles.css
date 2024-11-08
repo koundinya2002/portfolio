@@ -15,8 +15,9 @@ body {
 }
 
 .project-desc {
-    font-family: "Special Elite", system-ui;
     line-height: 1.2;
+    justify-content: center;
+    align-items: center;
 }
 
 html {
@@ -173,9 +174,9 @@ section {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 5rem;
     gap: 5rem;
-    height: 80vh;
+    height: 100vh;
     position: relative;
 }
 
@@ -195,6 +196,11 @@ section {
 
 .section__text__p2 {
     font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.section__text__p3 {
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -348,6 +354,12 @@ article .icon {
     color: black;
 }
 
+.project-sub-title {
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+    text-decoration: underline;
+}
+
 .project-btn {
     color: black;
     border-color: rgb(163, 163, 163);
@@ -360,6 +372,13 @@ article .icon {
     flex-direction: column;
     gap: 2.5rem;
     justify-content: space-around;
+}
+
+.bullets {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: rgb(85, 85, 85);
 }
 
 /* CONTACT SECTION */
